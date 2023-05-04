@@ -1,0 +1,635 @@
+Component: ARM Compiler 5.06 update 7 (build 960) Tool: armlink [4d3601]
+
+==============================================================================
+
+Small function inlining results
+
+Inlined total of 0 calls.
+
+==============================================================================
+
+Section Cross References
+
+    system_m480.o(.text) refers to main.o(.text) for CLK_GetPLLClockFreq
+    system_m480.o(.text) refers to system_m480.o(.data) for .data
+    startup_m480.o(RESET) refers to startup_m480.o(STACK) for __initial_sp
+    startup_m480.o(RESET) refers to startup_m480.o(.text) for Reset_Handler
+    startup_m480.o(RESET) refers to uart_transfer.o(.text) for UART1_IRQHandler
+    startup_m480.o(.text) refers to system_m480.o(.text) for SystemInit
+    startup_m480.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    main.o(.text) refers to uart_transfer.o(.text) for UART_Init
+    main.o(.text) refers to icplib.o(i.ICP_Init) for ICP_Init
+    main.o(.text) refers to icplib.o(i.ICP_ModeEntry) for ICP_ModeEntry
+    main.o(.text) refers to targetdev.o(.text) for GetApromSize
+    main.o(.text) refers to isp_user.o(.text) for ParseCmd
+    main.o(.text) refers to system_m480.o(.data) for PllClock
+    main.o(.text) refers to isp_user.o(.data) for g_apromSize
+    main.o(.text) refers to uart_transfer.o(.bss) for uart_rcvbuf
+    main.o(.text) refers to uart_transfer.o(.data) for bufhead
+    fmc_user.o(.text) refers to icplib.o(i.ICP_ProgramFlash) for ICP_ProgramFlash
+    fmc_user.o(.text) refers to icplib.o(i.ICP_ReadFlash) for ICP_ReadFlash
+    fmc_user.o(.text) refers to icplib.o(i.ICP_PageEraseFlash) for ICP_PageEraseFlash
+    fmc_user.o(.text) refers to icplib.o(i.ICP_BankErase) for ICP_BankErase
+    fmc_user.o(.text) refers to icplib.o(i.ICP_BlockErase) for ICP_BlockErase
+    isp_user.o(.text) refers to icplib.o(i.ICP_ReadFlash) for ICP_ReadFlash
+    isp_user.o(.text) refers to icplib.o(i.ICP_ReadDID) for ICP_ReadDID
+    isp_user.o(.text) refers to fmc_user.o(.text) for EraseAP
+    isp_user.o(.text) refers to targetdev.o(.text) for GetDataFlashInfo
+    isp_user.o(.text) refers to memseta.o(.text) for __aeabi_memclr
+    isp_user.o(.text) refers to isp_user.o(.bss) for .bss
+    isp_user.o(.text) refers to isp_user.o(.data) for .data
+    targetdev.o(.text) refers to icplib.o(i.ICP_ReadFlash) for ICP_ReadFlash
+    targetdev.o(.text) refers to isp_user.o(.data) for g_apromSize
+    uart_transfer.o(.text) refers to uart_transfer.o(.data) for .data
+    uart_transfer.o(.text) refers to uart_transfer.o(.bss) for .bss
+    uart_transfer.o(.text) refers to isp_user.o(.bss) for response_buff
+    icplib.o(i.CLK_SysTickDelay) refers to system_m480.o(.data) for CyclesPerUs
+    icplib.o(i.CRC8) refers to icplib.o(.constdata) for .constdata
+    icplib.o(i.GetCRCValue) refers to icplib.o(i.CRC8) for CRC8
+    icplib.o(i.ICP_BankErase) refers to icplib.o(i.ICP_SendCommand) for ICP_SendCommand
+    icplib.o(i.ICP_BankErase) refers to icplib.o(i.ICP_WriteData) for ICP_WriteData
+    icplib.o(i.ICP_BankErase) refers to icplib.o(.data) for .data
+    icplib.o(i.ICP_BlockErase) refers to icplib.o(i.ICP_SendCommand) for ICP_SendCommand
+    icplib.o(i.ICP_BlockErase) refers to icplib.o(i.ICP_WriteData) for ICP_WriteData
+    icplib.o(i.ICP_BlockErase) refers to icplib.o(.data) for .data
+    icplib.o(i.ICP_Init) refers to icplib.o(i.ICP_SetGPIOMode) for ICP_SetGPIOMode
+    icplib.o(i.ICP_Init) refers to icplib.o(.data) for .data
+    icplib.o(i.ICP_MassErase) refers to icplib.o(i.ICP_SendCommand) for ICP_SendCommand
+    icplib.o(i.ICP_MassErase) refers to icplib.o(i.ICP_WriteData) for ICP_WriteData
+    icplib.o(i.ICP_MassErase) refers to icplib.o(.data) for .data
+    icplib.o(i.ICP_ModeEntry) refers to icplib.o(i.ICP_SetReset) for ICP_SetReset
+    icplib.o(i.ICP_ModeEntry) refers to icplib.o(i.CLK_SysTickDelay) for CLK_SysTickDelay
+    icplib.o(i.ICP_ModeEntry) refers to icplib.o(i.ICP_WriteBits) for ICP_WriteBits
+    icplib.o(i.ICP_ModeEntry) refers to icplib.o(i.ICP_ReadCID) for ICP_ReadCID
+    icplib.o(i.ICP_ModeEntry) refers to icplib.o(i.ICP_ReadDID) for ICP_ReadDID
+    icplib.o(i.ICP_ModeExit) refers to icplib.o(i.CLK_SysTickDelay) for CLK_SysTickDelay
+    icplib.o(i.ICP_ModeExit) refers to icplib.o(i.ICP_SetReset) for ICP_SetReset
+    icplib.o(i.ICP_PageEraseFlash) refers to icplib.o(i.ICP_SendCommand) for ICP_SendCommand
+    icplib.o(i.ICP_PageEraseFlash) refers to icplib.o(i.ICP_WriteData) for ICP_WriteData
+    icplib.o(i.ICP_PageEraseFlash) refers to icplib.o(.data) for .data
+    icplib.o(i.ICP_ProgramConfigWithCRC) refers to icplib.o(i.GetCRCValue) for GetCRCValue
+    icplib.o(i.ICP_ProgramConfigWithCRC) refers to icplib.o(i.ICP_SendCommand) for ICP_SendCommand
+    icplib.o(i.ICP_ProgramConfigWithCRC) refers to icplib.o(i.ICP_WriteData) for ICP_WriteData
+    icplib.o(i.ICP_ProgramConfigWithCRC) refers to icplib.o(.data) for .data
+    icplib.o(i.ICP_ProgramFlash) refers to icplib.o(i.ICP_SendCommand) for ICP_SendCommand
+    icplib.o(i.ICP_ProgramFlash) refers to icplib.o(i.ICP_WriteData) for ICP_WriteData
+    icplib.o(i.ICP_ProgramFlash) refers to icplib.o(.data) for .data
+    icplib.o(i.ICP_ProgramVerifyFlash) refers to icplib.o(i.ICP_SendCommand) for ICP_SendCommand
+    icplib.o(i.ICP_ProgramVerifyFlash) refers to icplib.o(i.ICP_WriteData) for ICP_WriteData
+    icplib.o(i.ICP_ProgramVerifyFlash) refers to icplib.o(i.ICP_ReadData) for ICP_ReadData
+    icplib.o(i.ICP_ProgramVerifyFlash) refers to icplib.o(.data) for .data
+    icplib.o(i.ICP_ReadCID) refers to icplib.o(i.ICP_SendCommand) for ICP_SendCommand
+    icplib.o(i.ICP_ReadCID) refers to icplib.o(i.ICP_ReadData) for ICP_ReadData
+    icplib.o(i.ICP_ReadDID) refers to icplib.o(i.ICP_SendCommand) for ICP_SendCommand
+    icplib.o(i.ICP_ReadDID) refers to icplib.o(i.ICP_ReadData) for ICP_ReadData
+    icplib.o(i.ICP_ReadData) refers to icplib.o(i.ICP_SetGPIOMode) for ICP_SetGPIOMode
+    icplib.o(i.ICP_ReadData) refers to icplib.o(i.CLK_SysTickDelay) for CLK_SysTickDelay
+    icplib.o(i.ICP_ReadData) refers to icplib.o(i.ICP_WriteBits) for ICP_WriteBits
+    icplib.o(i.ICP_ReadFlash) refers to icplib.o(i.ICP_SendCommand) for ICP_SendCommand
+    icplib.o(i.ICP_ReadFlash) refers to icplib.o(i.ICP_ReadData) for ICP_ReadData
+    icplib.o(i.ICP_ReadPID) refers to icplib.o(i.ICP_SendCommand) for ICP_SendCommand
+    icplib.o(i.ICP_ReadPID) refers to icplib.o(i.ICP_ReadData) for ICP_ReadData
+    icplib.o(i.ICP_ReadUCID) refers to icplib.o(i.ICP_SendCommand) for ICP_SendCommand
+    icplib.o(i.ICP_ReadUCID) refers to icplib.o(i.ICP_ReadData) for ICP_ReadData
+    icplib.o(i.ICP_ReadUID) refers to icplib.o(i.ICP_SendCommand) for ICP_SendCommand
+    icplib.o(i.ICP_ReadUID) refers to icplib.o(i.ICP_ReadData) for ICP_ReadData
+    icplib.o(i.ICP_SPROMErase) refers to icplib.o(i.ICP_SendCommand) for ICP_SendCommand
+    icplib.o(i.ICP_SPROMErase) refers to icplib.o(i.ICP_WriteData) for ICP_WriteData
+    icplib.o(i.ICP_SPROMErase) refers to icplib.o(.data) for .data
+    icplib.o(i.ICP_SendCommand) refers to icplib.o(i.ICP_WriteBits) for ICP_WriteBits
+    icplib.o(i.ICP_SetMassEraseTime) refers to icplib.o(.data) for .data
+    icplib.o(i.ICP_SetPageEraseTime) refers to icplib.o(.data) for .data
+    icplib.o(i.ICP_SetProgramTime) refers to icplib.o(.data) for .data
+    icplib.o(i.ICP_SetReset) refers to icplib.o(.data) for .data
+    icplib.o(i.ICP_UnInit) refers to icplib.o(i.ICP_SetGPIOMode) for ICP_SetGPIOMode
+    icplib.o(i.ICP_UnInit) refers to icplib.o(.data) for .data
+    icplib.o(i.ICP_WriteBits) refers to icplib.o(i.CLK_SysTickDelay) for CLK_SysTickDelay
+    icplib.o(i.ICP_WriteData) refers to icplib.o(i.CLK_SysTickDelay) for CLK_SysTickDelay
+    icplib.o(i.ICP_WriteData) refers to icplib.o(i.ICP_WriteBits) for ICP_WriteBits
+    icplib.o(i.ICP_XOMErase) refers to icplib.o(i.ICP_SendCommand) for ICP_SendCommand
+    icplib.o(i.ICP_XOMErase) refers to icplib.o(i.ICP_WriteData) for ICP_WriteData
+    icplib.o(i.ICP_XOMErase) refers to icplib.o(.data) for .data
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000F) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$00000011) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry12b.o(.ARM.Collect$$$$0000000E) for __rt_lib_shutdown_fini
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_m480.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_m480.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(.text) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(.text) for main
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing system_m480.o(.rev16_text), (4 bytes).
+    Removing system_m480.o(.revsh_text), (4 bytes).
+    Removing system_m480.o(.rrx_text), (6 bytes).
+    Removing startup_m480.o(HEAP), (256 bytes).
+    Removing main.o(.rev16_text), (4 bytes).
+    Removing main.o(.revsh_text), (4 bytes).
+    Removing main.o(.rrx_text), (6 bytes).
+    Removing fmc_user.o(.rev16_text), (4 bytes).
+    Removing fmc_user.o(.revsh_text), (4 bytes).
+    Removing fmc_user.o(.rrx_text), (6 bytes).
+    Removing isp_user.o(.rev16_text), (4 bytes).
+    Removing isp_user.o(.revsh_text), (4 bytes).
+    Removing isp_user.o(.rrx_text), (6 bytes).
+    Removing targetdev.o(.rev16_text), (4 bytes).
+    Removing targetdev.o(.revsh_text), (4 bytes).
+    Removing targetdev.o(.rrx_text), (6 bytes).
+    Removing uart_transfer.o(.rev16_text), (4 bytes).
+    Removing uart_transfer.o(.revsh_text), (4 bytes).
+    Removing uart_transfer.o(.rrx_text), (6 bytes).
+    Removing icplib.o(.rev16_text), (4 bytes).
+    Removing icplib.o(.revsh_text), (4 bytes).
+    Removing icplib.o(.rrx_text), (6 bytes).
+    Removing icplib.o(i.CRC8), (40 bytes).
+    Removing icplib.o(i.GetCRCValue), (112 bytes).
+    Removing icplib.o(i.ICP_GetVersion), (4 bytes).
+    Removing icplib.o(i.ICP_MassErase), (32 bytes).
+    Removing icplib.o(i.ICP_ModeExit), (18 bytes).
+    Removing icplib.o(i.ICP_ProgramConfigWithCRC), (76 bytes).
+    Removing icplib.o(i.ICP_ProgramVerifyFlash), (192 bytes).
+    Removing icplib.o(i.ICP_ReadPID), (20 bytes).
+    Removing icplib.o(i.ICP_ReadUCID), (34 bytes).
+    Removing icplib.o(i.ICP_ReadUID), (30 bytes).
+    Removing icplib.o(i.ICP_SPROMErase), (36 bytes).
+    Removing icplib.o(i.ICP_SetMassEraseTime), (12 bytes).
+    Removing icplib.o(i.ICP_SetPageEraseTime), (12 bytes).
+    Removing icplib.o(i.ICP_SetProgramTime), (12 bytes).
+    Removing icplib.o(i.ICP_UnInit), (156 bytes).
+    Removing icplib.o(i.ICP_XOMErase), (40 bytes).
+    Removing icplib.o(.constdata), (16 bytes).
+
+39 unused section(s) (total 1196 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    RESET                                    0x00000000   Section      500  startup_m480.o(RESET)
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
+    ..\..\..\..\Library\Device\Nuvoton\M480\Source\ARM\startup_M480.s 0x00000000   Number         0  startup_m480.o ABSOLUTE
+    ..\..\..\..\Library\Device\Nuvoton\M480\Source\system_M480.c 0x00000000   Number         0  system_m480.o ABSOLUTE
+    ..\ICPLib.c                              0x00000000   Number         0  icplib.o ABSOLUTE
+    ..\\..\\..\\..\\Library\\Device\\Nuvoton\\M480\\Source\\system_M480.c 0x00000000   Number         0  system_m480.o ABSOLUTE
+    ..\\ICPLib.c                             0x00000000   Number         0  icplib.o ABSOLUTE
+    ..\\fmc_user.c                           0x00000000   Number         0  fmc_user.o ABSOLUTE
+    ..\\isp_user.c                           0x00000000   Number         0  isp_user.o ABSOLUTE
+    ..\\main.c                               0x00000000   Number         0  main.o ABSOLUTE
+    ..\\targetdev.c                          0x00000000   Number         0  targetdev.o ABSOLUTE
+    ..\\uart_transfer.c                      0x00000000   Number         0  uart_transfer.o ABSOLUTE
+    ..\fmc_user.c                            0x00000000   Number         0  fmc_user.o ABSOLUTE
+    ..\isp_user.c                            0x00000000   Number         0  isp_user.o ABSOLUTE
+    ..\main.c                                0x00000000   Number         0  main.o ABSOLUTE
+    ..\targetdev.c                           0x00000000   Number         0  targetdev.o ABSOLUTE
+    ..\uart_transfer.c                       0x00000000   Number         0  uart_transfer.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    .ARM.Collect$$$$00000000                 0x000001f4   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x000001f4   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x000001f8   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x000001fc   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x000001fc   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x000001fc   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    .ARM.Collect$$$$0000000E                 0x00000204   Section        4  entry12b.o(.ARM.Collect$$$$0000000E)
+    .ARM.Collect$$$$0000000F                 0x00000208   Section        0  entry10a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00000011                 0x00000208   Section        0  entry11a.o(.ARM.Collect$$$$00000011)
+    .ARM.Collect$$$$00002712                 0x00000208   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x00000208   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .text                                    0x0000020c   Section        0  system_m480.o(.text)
+    .text                                    0x000002cc   Section      104  startup_m480.o(.text)
+    $v0                                      0x000002cc   Number         0  startup_m480.o(.text)
+    Default_Handler                          0x0000031f   Thumb Code     2  startup_m480.o(.text)
+    .text                                    0x00000334   Section        0  main.o(.text)
+    .text                                    0x00000500   Section        0  fmc_user.o(.text)
+    .text                                    0x000005a8   Section        0  isp_user.o(.text)
+    Checksum                                 0x000007b5   Thumb Code    24  isp_user.o(.text)
+    .text                                    0x000007d4   Section        0  targetdev.o(.text)
+    .text                                    0x00000838   Section        0  uart_transfer.o(.text)
+    NVIC_EnableIRQ                           0x000008fb   Thumb Code    22  uart_transfer.o(.text)
+    NVIC_SetPriority                         0x00000911   Thumb Code    32  uart_transfer.o(.text)
+    .text                                    0x0000094c   Section        0  memseta.o(.text)
+    .text                                    0x00000970   Section       36  init.o(.text)
+    i.CLK_SysTickDelay                       0x00000994   Section        0  icplib.o(i.CLK_SysTickDelay)
+    CLK_SysTickDelay                         0x00000995   Thumb Code    30  icplib.o(i.CLK_SysTickDelay)
+    i.ICP_BankErase                          0x000009b8   Section        0  icplib.o(i.ICP_BankErase)
+    i.ICP_BlockErase                         0x000009d8   Section        0  icplib.o(i.ICP_BlockErase)
+    i.ICP_Init                               0x000009fc   Section        0  icplib.o(i.ICP_Init)
+    i.ICP_ModeEntry                          0x00000b0c   Section        0  icplib.o(i.ICP_ModeEntry)
+    i.ICP_PageEraseFlash                     0x00000b64   Section        0  icplib.o(i.ICP_PageEraseFlash)
+    i.ICP_ProgramFlash                       0x00000b84   Section        0  icplib.o(i.ICP_ProgramFlash)
+    i.ICP_ReadCID                            0x00000be8   Section        0  icplib.o(i.ICP_ReadCID)
+    i.ICP_ReadDID                            0x00000bfc   Section        0  icplib.o(i.ICP_ReadDID)
+    i.ICP_ReadData                           0x00000c10   Section        0  icplib.o(i.ICP_ReadData)
+    ICP_ReadData                             0x00000c11   Thumb Code   156  icplib.o(i.ICP_ReadData)
+    i.ICP_ReadFlash                          0x00000cb0   Section        0  icplib.o(i.ICP_ReadFlash)
+    i.ICP_SendCommand                        0x00000d0c   Section        0  icplib.o(i.ICP_SendCommand)
+    ICP_SendCommand                          0x00000d0d   Thumb Code    10  icplib.o(i.ICP_SendCommand)
+    i.ICP_SetGPIOMode                        0x00000d16   Section        0  icplib.o(i.ICP_SetGPIOMode)
+    ICP_SetGPIOMode                          0x00000d17   Thumb Code    20  icplib.o(i.ICP_SetGPIOMode)
+    i.ICP_SetReset                           0x00000d2c   Section        0  icplib.o(i.ICP_SetReset)
+    ICP_SetReset                             0x00000d2d   Thumb Code    26  icplib.o(i.ICP_SetReset)
+    i.ICP_WriteBits                          0x00000d50   Section        0  icplib.o(i.ICP_WriteBits)
+    ICP_WriteBits                            0x00000d51   Thumb Code    72  icplib.o(i.ICP_WriteBits)
+    i.ICP_WriteData                          0x00000d9c   Section        0  icplib.o(i.ICP_WriteData)
+    ICP_WriteData                            0x00000d9d   Thumb Code   106  icplib.o(i.ICP_WriteData)
+    i.__scatterload_copy                     0x00000e10   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x00000e1e   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x00000e20   Section       14  handlers.o(i.__scatterload_zeroinit)
+    .data                                    0x20000000   Section       44  system_m480.o(.data)
+    .data                                    0x2000002c   Section       44  isp_user.o(.data)
+    StartAddress                             0x2000002c   Data           4  isp_user.o(.data)
+    StartAddress_bak                         0x20000030   Data           4  isp_user.o(.data)
+    TotalLen                                 0x20000034   Data           4  isp_user.o(.data)
+    TotalLen_bak                             0x20000038   Data           4  isp_user.o(.data)
+    LastDataLen                              0x2000003c   Data           4  isp_user.o(.data)
+    g_packno                                 0x20000040   Data           4  isp_user.o(.data)
+    gcmd                                     0x20000044   Data           4  isp_user.o(.data)
+    .data                                    0x20000058   Section        2  uart_transfer.o(.data)
+    .data                                    0x2000005c   Section       96  icplib.o(.data)
+    g_u32ResetActiveLevel                    0x2000005c   Data           4  icplib.o(.data)
+    g_u32IOMode_RST                          0x20000060   Data           4  icplib.o(.data)
+    g_u32IOMode_CLK                          0x20000064   Data           4  icplib.o(.data)
+    g_u32IOMode_DAT                          0x20000068   Data           4  icplib.o(.data)
+    g_u32IOMode_LV0                          0x2000006c   Data           4  icplib.o(.data)
+    g_u32IOMode_LV1                          0x20000070   Data           4  icplib.o(.data)
+    g_u32IOLevel_RST                         0x20000074   Data           4  icplib.o(.data)
+    g_u32IOLevel_CLK                         0x20000078   Data           4  icplib.o(.data)
+    g_u32IOLevel_DAT                         0x2000007c   Data           4  icplib.o(.data)
+    g_u32IOLevel_LV0                         0x20000080   Data           4  icplib.o(.data)
+    g_u32IOLevel_LV1                         0x20000084   Data           4  icplib.o(.data)
+    g_u32MFP_RST                             0x20000088   Data           4  icplib.o(.data)
+    g_u32MFP_CLK                             0x2000008c   Data           4  icplib.o(.data)
+    g_u32MFP_DAT                             0x20000090   Data           4  icplib.o(.data)
+    g_u32MFP_LV0                             0x20000094   Data           4  icplib.o(.data)
+    g_u32MFP_LV1                             0x20000098   Data           4  icplib.o(.data)
+    g_ICPTiming                              0x2000009c   Data          32  icplib.o(.data)
+    .bss                                     0x200000bc   Section     4160  isp_user.o(.bss)
+    aprom_buf                                0x200000fc   Data        4096  isp_user.o(.bss)
+    .bss                                     0x200010fc   Section       64  uart_transfer.o(.bss)
+    STACK                                    0x20001140   Section     2048  startup_m480.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPi3$EXTD16$VFPS$VFMA$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  main.o ABSOLUTE
+    __Vectors                                0x00000000   Data           4  startup_m480.o(RESET)
+    __arm_fini_                               - Undefined Weak Reference
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    __Vectors_End                            0x000001f4   Data           0  startup_m480.o(RESET)
+    __Vectors_Size                           0x000001f4   Number         0  startup_m480.o ABSOLUTE
+    __main                                   0x000001f5   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x000001f5   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x000001f9   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x000001fd   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x000001fd   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x000001fd   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x000001fd   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_lib_shutdown_fini                   0x00000205   Thumb Code     0  entry12b.o(.ARM.Collect$$$$0000000E)
+    __rt_final_cpp                           0x00000209   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000F)
+    __rt_final_exit                          0x00000209   Thumb Code     0  entry11a.o(.ARM.Collect$$$$00000011)
+    SystemCoreClockUpdate                    0x0000020d   Thumb Code    64  system_m480.o(.text)
+    SystemInit                               0x0000024d   Thumb Code   108  system_m480.o(.text)
+    Reset_Handler                            0x000002cd   Thumb Code    64  startup_m480.o(.text)
+    NMI_Handler                              0x0000030d   Thumb Code     2  startup_m480.o(.text)
+    HardFault_Handler                        0x0000030f   Thumb Code     2  startup_m480.o(.text)
+    MemManage_Handler                        0x00000311   Thumb Code     2  startup_m480.o(.text)
+    BusFault_Handler                         0x00000313   Thumb Code     2  startup_m480.o(.text)
+    UsageFault_Handler                       0x00000315   Thumb Code     2  startup_m480.o(.text)
+    SVC_Handler                              0x00000317   Thumb Code     2  startup_m480.o(.text)
+    DebugMon_Handler                         0x00000319   Thumb Code     2  startup_m480.o(.text)
+    PendSV_Handler                           0x0000031b   Thumb Code     2  startup_m480.o(.text)
+    SysTick_Handler                          0x0000031d   Thumb Code     2  startup_m480.o(.text)
+    ACMP01_IRQHandler                        0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    BOD_IRQHandler                           0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    BPWM0_IRQHandler                         0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    BPWM1_IRQHandler                         0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    BRAKE0_IRQHandler                        0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    BRAKE1_IRQHandler                        0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    CAN0_IRQHandler                          0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    CAN1_IRQHandler                          0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    CAN2_IRQHandler                          0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    CCAP_IRQHandler                          0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    CKFAIL_IRQHandler                        0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    CRYPTO_IRQHandler                        0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    DAC_IRQHandler                           0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    EADC00_IRQHandler                        0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    EADC01_IRQHandler                        0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    EADC02_IRQHandler                        0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    EADC03_IRQHandler                        0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    EADC10_IRQHandler                        0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    EADC11_IRQHandler                        0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    EADC12_IRQHandler                        0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    EADC13_IRQHandler                        0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    ECAP0_IRQHandler                         0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    ECAP1_IRQHandler                         0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    EHCI_IRQHandler                          0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    EINT0_IRQHandler                         0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    EINT1_IRQHandler                         0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    EINT2_IRQHandler                         0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    EINT3_IRQHandler                         0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    EINT4_IRQHandler                         0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    EINT5_IRQHandler                         0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    EINT6_IRQHandler                         0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    EINT7_IRQHandler                         0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    EMAC_RX_IRQHandler                       0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    EMAC_TX_IRQHandler                       0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    EPWM0P0_IRQHandler                       0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    EPWM0P1_IRQHandler                       0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    EPWM0P2_IRQHandler                       0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    EPWM1P0_IRQHandler                       0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    EPWM1P1_IRQHandler                       0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    EPWM1P2_IRQHandler                       0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    GPA_IRQHandler                           0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    GPB_IRQHandler                           0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    GPC_IRQHandler                           0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    GPD_IRQHandler                           0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    GPE_IRQHandler                           0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    GPF_IRQHandler                           0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    GPG_IRQHandler                           0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    GPH_IRQHandler                           0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    I2C0_IRQHandler                          0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    I2C1_IRQHandler                          0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    I2C2_IRQHandler                          0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    I2S0_IRQHandler                          0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    IRC_IRQHandler                           0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    OHCI_IRQHandler                          0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    OPA0_IRQHandler                          0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    PDMA_IRQHandler                          0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    PWRWU_IRQHandler                         0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    QEI0_IRQHandler                          0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    QEI1_IRQHandler                          0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    QSPI0_IRQHandler                         0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    QSPI1_IRQHandler                         0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    RAMPE_IRQHandler                         0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    RTC_IRQHandler                           0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    SC0_IRQHandler                           0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    SC1_IRQHandler                           0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    SC2_IRQHandler                           0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    SDH0_IRQHandler                          0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    SDH1_IRQHandler                          0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    SPI0_IRQHandler                          0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    SPI1_IRQHandler                          0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    SPI2_IRQHandler                          0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    SPI3_IRQHandler                          0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    SPIM_IRQHandler                          0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    TAMPER_IRQHandler                        0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    TMR0_IRQHandler                          0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    TMR1_IRQHandler                          0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    TMR2_IRQHandler                          0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    TMR3_IRQHandler                          0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    TRNG_IRQHandler                          0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    UART0_IRQHandler                         0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    UART2_IRQHandler                         0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    UART3_IRQHandler                         0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    UART4_IRQHandler                         0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    UART5_IRQHandler                         0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    UART6_IRQHandler                         0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    UART7_IRQHandler                         0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    USBD20_IRQHandler                        0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    USBD_IRQHandler                          0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    USBOTG20_IRQHandler                      0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    USBOTG_IRQHandler                        0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    USCI0_IRQHandler                         0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    USCI1_IRQHandler                         0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    WDT_IRQHandler                           0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    WWDT_IRQHandler                          0x0000031f   Thumb Code     0  startup_m480.o(.text)
+    CLK_GetPLLClockFreq                      0x00000335   Thumb Code     4  main.o(.text)
+    SYS_Init                                 0x00000339   Thumb Code   204  main.o(.text)
+    main                                     0x00000405   Thumb Code   188  main.o(.text)
+    FMC_Write_User                           0x00000501   Thumb Code    14  fmc_user.o(.text)
+    FMC_Read_User                            0x0000050f   Thumb Code    14  fmc_user.o(.text)
+    FMC_Erase_User                           0x0000051d   Thumb Code    10  fmc_user.o(.text)
+    ReadData                                 0x00000527   Thumb Code     6  fmc_user.o(.text)
+    WriteData                                0x0000052d   Thumb Code     6  fmc_user.o(.text)
+    EraseAP                                  0x00000533   Thumb Code    80  fmc_user.o(.text)
+    UpdateConfig                             0x00000583   Thumb Code    38  fmc_user.o(.text)
+    ParseCmd                                 0x000005a9   Thumb Code   524  isp_user.o(.text)
+    GetApromSize                             0x000007d5   Thumb Code     6  targetdev.o(.text)
+    GetDataFlashInfo                         0x000007db   Thumb Code    84  targetdev.o(.text)
+    UART1_IRQHandler                         0x00000839   Thumb Code    64  uart_transfer.o(.text)
+    PutString                                0x00000879   Thumb Code    24  uart_transfer.o(.text)
+    UART_Init                                0x00000891   Thumb Code   106  uart_transfer.o(.text)
+    __aeabi_memset                           0x0000094d   Thumb Code    14  memseta.o(.text)
+    __aeabi_memset4                          0x0000094d   Thumb Code     0  memseta.o(.text)
+    __aeabi_memset8                          0x0000094d   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr                           0x0000095b   Thumb Code     4  memseta.o(.text)
+    __aeabi_memclr4                          0x0000095b   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr8                          0x0000095b   Thumb Code     0  memseta.o(.text)
+    _memset$wrapper                          0x0000095f   Thumb Code    18  memseta.o(.text)
+    __scatterload                            0x00000971   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x00000971   Thumb Code     0  init.o(.text)
+    ICP_BankErase                            0x000009b9   Thumb Code    28  icplib.o(i.ICP_BankErase)
+    ICP_BlockErase                           0x000009d9   Thumb Code    32  icplib.o(i.ICP_BlockErase)
+    ICP_Init                                 0x000009fd   Thumb Code   254  icplib.o(i.ICP_Init)
+    ICP_ModeEntry                            0x00000b0d   Thumb Code    78  icplib.o(i.ICP_ModeEntry)
+    ICP_PageEraseFlash                       0x00000b65   Thumb Code    28  icplib.o(i.ICP_PageEraseFlash)
+    ICP_ProgramFlash                         0x00000b85   Thumb Code    96  icplib.o(i.ICP_ProgramFlash)
+    ICP_ReadCID                              0x00000be9   Thumb Code    20  icplib.o(i.ICP_ReadCID)
+    ICP_ReadDID                              0x00000bfd   Thumb Code    20  icplib.o(i.ICP_ReadDID)
+    ICP_ReadFlash                            0x00000cb1   Thumb Code    92  icplib.o(i.ICP_ReadFlash)
+    __scatterload_copy                       0x00000e11   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x00000e1f   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x00000e21   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    Region$$Table$$Base                      0x00000e30   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00000e50   Number         0  anon$$obj.o(Region$$Table)
+    SystemCoreClock                          0x20000000   Data           4  system_m480.o(.data)
+    CyclesPerUs                              0x20000004   Data           4  system_m480.o(.data)
+    PllClock                                 0x20000008   Data           4  system_m480.o(.data)
+    gau32ClkSrcTbl                           0x2000000c   Data          32  system_m480.o(.data)
+    bUpdateApromCmd                          0x20000048   Data           4  isp_user.o(.data)
+    g_apromSize                              0x2000004c   Data           4  isp_user.o(.data)
+    g_dataFlashAddr                          0x20000050   Data           4  isp_user.o(.data)
+    g_dataFlashSize                          0x20000054   Data           4  isp_user.o(.data)
+    bUartDataReady                           0x20000058   Data           1  uart_transfer.o(.data)
+    bufhead                                  0x20000059   Data           1  uart_transfer.o(.data)
+    response_buff                            0x200000bc   Data          64  isp_user.o(.bss)
+    uart_rcvbuf                              0x200010fc   Data          64  uart_transfer.o(.bss)
+    __initial_sp                             0x20001940   Data           0  startup_m480.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x000002cd
+
+  Load Region LR_1 (Base: 0x00000000, Size: 0x00000f0c, Max: 0xffffffff, ABSOLUTE)
+
+    Execution Region ER_RO (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00000e50, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000000   0x000001f4   Data   RO          321    RESET               startup_m480.o
+    0x000001f4   0x000001f4   0x00000000   Code   RO         1286  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x000001f4   0x000001f4   0x00000004   Code   RO         1289    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x000001f8   0x000001f8   0x00000004   Code   RO         1292    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x000001fc   0x000001fc   0x00000000   Code   RO         1294    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x000001fc   0x000001fc   0x00000000   Code   RO         1296    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x000001fc   0x000001fc   0x00000008   Code   RO         1297    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x00000204   0x00000204   0x00000004   Code   RO         1304    .ARM.Collect$$$$0000000E  mc_w.l(entry12b.o)
+    0x00000208   0x00000208   0x00000000   Code   RO         1299    .ARM.Collect$$$$0000000F  mc_w.l(entry10a.o)
+    0x00000208   0x00000208   0x00000000   Code   RO         1301    .ARM.Collect$$$$00000011  mc_w.l(entry11a.o)
+    0x00000208   0x00000208   0x00000004   Code   RO         1290    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x0000020c   0x0000020c   0x000000c0   Code   RO            4    .text               system_m480.o
+    0x000002cc   0x000002cc   0x00000068   Code   RO          322  * .text               startup_m480.o
+    0x00000334   0x00000334   0x000001cc   Code   RO          329    .text               main.o
+    0x00000500   0x00000500   0x000000a8   Code   RO          649    .text               fmc_user.o
+    0x000005a8   0x000005a8   0x0000022c   Code   RO          676    .text               isp_user.o
+    0x000007d4   0x000007d4   0x00000064   Code   RO          731    .text               targetdev.o
+    0x00000838   0x00000838   0x00000114   Code   RO          762    .text               uart_transfer.o
+    0x0000094c   0x0000094c   0x00000024   Code   RO         1287    .text               mc_w.l(memseta.o)
+    0x00000970   0x00000970   0x00000024   Code   RO         1305    .text               mc_w.l(init.o)
+    0x00000994   0x00000994   0x00000024   Code   RO          808    i.CLK_SysTickDelay  ICPLib.lib(icplib.o)
+    0x000009b8   0x000009b8   0x00000020   Code   RO          811    i.ICP_BankErase     ICPLib.lib(icplib.o)
+    0x000009d8   0x000009d8   0x00000024   Code   RO          812    i.ICP_BlockErase    ICPLib.lib(icplib.o)
+    0x000009fc   0x000009fc   0x00000110   Code   RO          814    i.ICP_Init          ICPLib.lib(icplib.o)
+    0x00000b0c   0x00000b0c   0x00000058   Code   RO          816    i.ICP_ModeEntry     ICPLib.lib(icplib.o)
+    0x00000b64   0x00000b64   0x00000020   Code   RO          818    i.ICP_PageEraseFlash  ICPLib.lib(icplib.o)
+    0x00000b84   0x00000b84   0x00000064   Code   RO          820    i.ICP_ProgramFlash  ICPLib.lib(icplib.o)
+    0x00000be8   0x00000be8   0x00000014   Code   RO          822    i.ICP_ReadCID       ICPLib.lib(icplib.o)
+    0x00000bfc   0x00000bfc   0x00000014   Code   RO          823    i.ICP_ReadDID       ICPLib.lib(icplib.o)
+    0x00000c10   0x00000c10   0x000000a0   Code   RO          824    i.ICP_ReadData      ICPLib.lib(icplib.o)
+    0x00000cb0   0x00000cb0   0x0000005c   Code   RO          825    i.ICP_ReadFlash     ICPLib.lib(icplib.o)
+    0x00000d0c   0x00000d0c   0x0000000a   Code   RO          830    i.ICP_SendCommand   ICPLib.lib(icplib.o)
+    0x00000d16   0x00000d16   0x00000014   Code   RO          831    i.ICP_SetGPIOMode   ICPLib.lib(icplib.o)
+    0x00000d2a   0x00000d2a   0x00000002   PAD
+    0x00000d2c   0x00000d2c   0x00000024   Code   RO          835    i.ICP_SetReset      ICPLib.lib(icplib.o)
+    0x00000d50   0x00000d50   0x0000004c   Code   RO          837    i.ICP_WriteBits     ICPLib.lib(icplib.o)
+    0x00000d9c   0x00000d9c   0x00000074   Code   RO          838    i.ICP_WriteData     ICPLib.lib(icplib.o)
+    0x00000e10   0x00000e10   0x0000000e   Code   RO         1309    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x00000e1e   0x00000e1e   0x00000002   Code   RO         1310    i.__scatterload_null  mc_w.l(handlers.o)
+    0x00000e20   0x00000e20   0x0000000e   Code   RO         1311    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x00000e2e   0x00000e2e   0x00000002   PAD
+    0x00000e30   0x00000e30   0x00000020   Data   RO         1307    Region$$Table       anon$$obj.o
+
+
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x00000e50, Size: 0x000000bc, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x00000e50   0x0000002c   Data   RW            5    .data               system_m480.o
+    0x2000002c   0x00000e7c   0x0000002c   Data   RW          678    .data               isp_user.o
+    0x20000058   0x00000ea8   0x00000002   Data   RW          764    .data               uart_transfer.o
+    0x2000005a   0x00000eaa   0x00000002   PAD
+    0x2000005c   0x00000eac   0x00000060   Data   RW          841    .data               ICPLib.lib(icplib.o)
+
+
+    Execution Region ER_ZI (Exec base: 0x200000bc, Load base: 0x00000f0c, Size: 0x00001884, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x200000bc        -       0x00001040   Zero   RW          677    .bss                isp_user.o
+    0x200010fc        -       0x00000040   Zero   RW          763    .bss                uart_transfer.o
+    0x2000113c   0x00000f0c   0x00000004   PAD
+    0x20001140        -       0x00000800   Zero   RW          319    STACK               startup_m480.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       168          0          0          0          0       2478   fmc_user.o
+       556          8          0         44       4160      15259   isp_user.o
+       460         64          0          0          0      84992   main.o
+       104         20        500          0       2048        976   startup_m480.o
+       192         20          0         44          0       6433   system_m480.o
+       100         10          0          0          0       1312   targetdev.o
+       276         28          0          2         64      28783   uart_transfer.o
+
+    ----------------------------------------------------------------------
+      1856        150        532         92       6276     140233   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+         0          0          0          2          4          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+      1146         78          0         96          0      31402   icplib.o
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         4          0          0          0          0          0   entry12b.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+        36          0          0          0          0        108   memseta.o
+
+    ----------------------------------------------------------------------
+      1276         94          0         96          0      31578   Library Totals
+         4          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+      1146         78          0         96          0      31402   ICPLib.lib
+       126         16          0          0          0        176   mc_w.l
+
+    ----------------------------------------------------------------------
+      1276         94          0         96          0      31578   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      3132        244        532        188       6276     169715   Grand Totals
+      3132        244        532        188       6276     169715   ELF Image Totals
+      3132        244        532        188          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 3664 (   3.58kB)
+    Total RW  Size (RW Data + ZI Data)              6464 (   6.31kB)
+    Total ROM Size (Code + RO Data + RW Data)       3852 (   3.76kB)
+
+==============================================================================
+
